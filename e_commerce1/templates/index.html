@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Main Website</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <style>
+        /* Styling for the product suggestion popup */
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            z-index: 9999;
+            display: none;
+        }
+        .popup.show {
+            display: block;
+        }
+        .popup-content {
+            text-align: center;
+        }
+        .close-btn {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Main Website!</h1>
+        <p>Search for products using the search bar.</p>
+        <form action="/" method="POST">
+            <input type="text" name="search" placeholder="Enter a product">
+            <input type="submit" value="Search">
+        </form>
+    </div>
+    <div>
+        {% for feedback in feedbacks %}
+            {{feedback}}
+        {% endfor %}
+    </div>
+
+    <!-- Product Suggestion Popup -->
+    <div class="popup" id="productPopup">
+        <div class="popup-content">
+            <h2>Product Suggestion</h2>
+            <h3 id="productName"></h3>
+            <p id="productDescription"></p>
+            <img id="productImage" src="" alt="Product Image">
+            <a href="#" class="close-btn" onclick="closePopup()">Close</a>
+        </div>
+    </div>
+
+    <!-- JavaScript to control the display and populate the product details -->
+    <script>
+        function closePopup() {
+            document.getElementById("productPopup").classList.remove("show");
+        }
+
+        function showProductDetails() {
+            // Simulated product data
+            var product = {
+                name: "Prodssuct Name",
+                description: "Product Description Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                imageUrl: "./realmeicon.jpg"
+            };
+
+            // Populate the product details in the popup
+            document.getElementById("productName").textContent = product.name;
+            document.getElementById("productDescription").textContent = product.description;
+            document.getElementById("productImage").src = product.imageUrl;
+
+            // Show the popup
+            document.getElementById("productPopup").classList.add("show");
+        }
+
+        // Show the product suggestion popup after a delay (e.g., 5 seconds)
+        setTimeout(showProductDetails, 3000); // Adjust the delay in milliseconds as needed
+    </script>
+</body>
+</html>

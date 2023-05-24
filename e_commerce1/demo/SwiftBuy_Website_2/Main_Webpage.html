@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <title>SwiftBuy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <!--Navigation Bar For Header -->
+    <nav style="text-align: center">
+        <div  class="rectangle-box">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        </div>
+    </nav>
+    <!--if you need Header Name And Sentence without the video,add this
+     <h1 style="color:Yellow;text-align: center;font-size:50px"><br><br><br> SwiftBuy</h1>
+        <p style="color:orange;text-align: center;font-size:30px">Ignite Your Imagination with Game-Changing Gadgets for Every Adventure!</p>
+
+        then remove the below div to remove the video and remove video-container and video container video in css file
+        -->
+
+    <div class="video-container">
+        <video width="100%" height="100%" autoplay loop muted>
+            <source src="resources/cyberpunk.mp4" type="video/mp4"> <!-- Replace with your video file path -->
+        </video>
+    </div>
+</header>
+
+<section id="top-sellings">
+    <h2 style="color:Blue;">Recommended Items</h2>
+    <p style="color:Green">Based On Top Selling Products</p>
+    <!--Shows Small Info Of Laptop -->
+    <div class="rectangle-box2">
+        <img src="resources/asusicon.webp" class="left-align" height="100" width="150" alt="Asus Vivobook 15"/>
+        <h3><ul style="list-style-type: none; padding: 0;">
+            <li><a href='asuslaptop.html'>ASUS Vivobook 15 Core i3 11th Gen</a></li>
+        </ul></h3>
+        <div class="rating">
+            <span style="color:yellow;font-size: 20px" class="star">&#9733;</span>
+            <span style="color:yellow;font-size: 20px" class="star">&#9733;</span>
+            <span style="color:yellow;font-size: 20px" class="star">&#9733;</span>
+            <span style="color:yellow;font-size: 20px" class="star">&#9733;</span>
+            <span style="color:yellow;font-size: 20px" class="star-half">&#9734;&#xFE0E;</span>
+        </div>
+        <p style="color:blue" class="word">1,349 ratings </p>
+        <p class=word><s>&#8377 50,990</s><b>&#8377 38,990</b></p>
+        <!--This Creates Rectangle Box and shows the product highlight as hint-->
+        <div class="rectangle-box-dark">
+            39.62cm(15.6 inch) Full HD Display
+        </div>
+        <div class="rectangle-box-dark">
+            8GB/512GB SSD/Windows 11 Home
+        </div>
+        <div class="rectangle-box-dark">
+            Microsoft Office
+        </div>
+        <div class="rectangle-box-dark">
+            Intel Core i3 11th Gen
+        </div>
+    </div>
+    <!--Shows Small Info Of Phone -->
+    <div class="rectangle-box2">
+        <img src="resources/realmeicon.jpg" class="left-align" height="150" width="120" alt="Realme C55"/>
+        <h3><ul style="list-style-type: none; padding: 0;">
+            <li><a href='realmec55.html'>Realme C55 (Rainy Night,8GB/128GB)</a></li>
+        </ul></h3>
+        <div class="rating">
+            <span style="color:yellow;font-size: 20px" class="star">&#9733;</span>
+            <span style="color:yellow;font-size: 20px" class="star">&#9733;</span>
+            <span style="color:yellow;font-size: 20px" class="star">&#9733;</span>
+            <span style="color:yellow;font-size: 20px" class="star">&#9733;</span>
+            <span style="color:yellow;font-size: 20px" class="star-half">&#9734;&#xFE0E;</span>
+        </div>
+        <p style="color:blue" class="word1">1,349 ratings </p>
+        <p class=word1><s>&#8377 15,999</s><b>&#8377 13,999</b></p>
+        <!--This Creates Rectangle Box and shows the product highlight as hint-->
+        <div class="rectangle-box-dark">
+            8 GB RAM | 128GB ROM | Expandable Upto 1 TB
+        </div>
+        <div class="rectangle-box-dark">
+            17.07cm (6.72 inch) Full HD+ Display
+        </div>
+        <div class="rectangle-box-dark">
+            64MP+2MP | 8MP Front Camera
+        </div>
+        <div class="rectangle-box-dark">
+            5000mAh Battery
+        </div>
+        <div class="rectangle-box-dark">
+            Helio G88 Processor
+        </div>
+    </div>
+    <!-- Add more products here -->
+</section>
+
+<footer>
+    <p>&copy; 2023 SwiftBuy Private Ltd. This Is Demo Website.</p>
+</footer>
+</body>
+</html>
